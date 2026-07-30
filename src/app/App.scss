@@ -1,3 +1,5 @@
+@use "../styles/variables" as *;
+
 .chatPage {
   height: 100vh;
   display: flex;
@@ -8,7 +10,11 @@
   flex: 1;
   overflow: auto;
   padding: 16px;
-  background: #f6f8ff;
+  background: $color-background;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .chatInput {
@@ -16,38 +22,55 @@
   display: flex;
   gap: 10px;
   background: #ffffff;
-  border-top: 1px solid #e6e9f2;
+  border-top: 1px solid rgba(60, 80, 120, 0.14);
 }
 
 .chatInput input {
   flex: 1;
-  border: 1px solid #d9deee;
-  border-radius: 10px;
+  border: 1px solid rgba(60, 80, 120, 0.18);
+  border-radius: 12px;
   padding: 10px 12px;
 }
 
 .chatInput button {
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 10px 14px;
-  background: #0b5cff;
+  background: $blue-deep;
   color: white;
+  box-shadow: 0 12px 24px -18px rgba(11, 59, 121, 0.6);
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
 }
 
 .chatBubble {
-  margin: 10px 0;
-  max-width: 720px;
-  border-radius: 14px;
-  padding: 12px 14px;
-  box-shadow: 0 6px 18px rgba(20, 30, 60, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 92%;
 }
 
 .chatBubble--user {
-  background: #e9f1ff;
   margin-left: auto;
+  align-items: flex-end;
+
+  background: rgba(233, 241, 255, 1);
+  border: 1px solid rgba(79, 143, 230, 0.18);
+  box-shadow: 0 10px 28px -18px rgba(79, 143, 230, 0.35);
+
+  border-radius: 16px;
+  padding: 10px 12px;
 }
 
 .chatBubble--bot {
-  background: #ffffff;
   margin-right: auto;
+  align-items: flex-start;
+
+  background: transparent; // WordCard glass handles the look
+  border-radius: 16px;
+  padding: 0;
+  width: 100%;
 }
