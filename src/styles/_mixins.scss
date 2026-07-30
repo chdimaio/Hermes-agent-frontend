@@ -1,0 +1,27 @@
+@use "./variables" as *;
+
+@mixin glass-card {
+  background: $background-card;
+  border: $border-default;
+  border-radius: $border-radius;
+  box-shadow: $shadow-card;
+  backdrop-filter: blur(10px);
+}
+
+@mixin focus-ring {
+  &:focus-visible {
+    outline: none;
+    box-shadow: $focus-ring;
+  }
+}
+
+@mixin pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(79, 143, 230, 0.25);
+  background: rgba(234, 243, 255, 0.65);
+  color: $color-text-secondary;
+  font-size: $font-size-sm;
+}

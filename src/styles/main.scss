@@ -1,0 +1,129 @@
+@use "./variables" as *;
+@use "./reset";
+@use "./mixins" as m;
+
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-secondary;
+  font-size: $font-size-base;
+  line-height: 1.45;
+  color: $color-text-primary;
+  background: $color-background;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+}
+
+/* ====== Generic UI used by ChatPage + WordCard ====== */
+.chatShell {
+  /* matches the soft blue vignette feel in your prototype */
+  background:
+    radial-gradient(1100px 520px at 50% 5%, rgba(79, 143, 230, 0.20), transparent 60%),
+    radial-gradient(900px 420px at 15% 25%, rgba(79, 143, 230, 0.12), transparent 55%),
+    linear-gradient(180deg, $color-background-alt 0%, $color-background 60%);
+  min-height: 100vh;
+  padding: $spacing-lg $spacing-md;
+}
+
+.chatPanel {
+  max-width: $chat-max-width;
+  margin: 0 auto;
+}
+
+.chatCard {
+  @include m.glass-card;
+}
+
+/* Chat bubbles */
+.chatMessageRow {
+  display: flex;
+  margin: 0.75rem 0;
+}
+
+.chatMessageRow--user {
+  justify-content: flex-end;
+}
+
+.chatMessageRow--bot {
+  justify-content: flex-start;
+}
+
+.chatBubble {
+  @include m.glass-card;
+  padding: 0.95rem 1rem;
+  max-width: 720px;
+}
+
+.chatBubble--user {
+  background: rgba(79, 143, 230, 0.14);
+  border-color: rgba(79, 143, 230, 0.28);
+}
+
+.chatBubble__text {
+  margin: 0;
+  color: $color-text-secondary;
+  white-space: pre-wrap;
+}
+
+.chatMeta {
+  margin-top: 0.35rem;
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* Input area */
+.chatInputBar {
+  @include m.glass-card;
+  margin-top: $spacing-md;
+  padding: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.chatInput {
+  height: $input-height;
+  border-radius: $border-radius-sm;
+  border: 1px solid rgba(60, 80, 120, 0.18);
+  padding: 0 0.9rem;
+  background: rgba(255, 255, 255, 0.55);
+  color: $color-text-primary;
+
+  @include m.focus-ring;
+}
+
+.sendButton {
+  width: $input-height;
+  height: $input-height;
+  border-radius: $border-radius-sm;
+  background: rgba(79, 143, 230, 0.18);
+  border: 1px solid rgba(79, 143, 230, 0.28);
+  display: grid;
+  place-items: center;
+
+  @include m.focus-ring;
+}
+
+/* WordCard bits */
+.synPill {
+  @include m.pill;
+}
