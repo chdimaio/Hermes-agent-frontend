@@ -1,1 +1,138 @@
+@use "../../../styles/variables" as *;
 
+.wordCard {
+  width: 100%;
+}
+
+.wordCard__glass {
+  background: $background-card;
+  border: 1px solid rgba(20, 60, 110, 0.14);
+  box-shadow: $shadow-card;
+  border-radius: $border-radius;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  padding: 14px 14px 10px;
+}
+
+.wordCard__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.wordCard__titleBlock {
+  min-width: 0;
+}
+
+.wordCard__label {
+  display: inline-block;
+  font-family: $font-secondary;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  letter-spacing: 0.01em;
+  margin-bottom: 6px;
+}
+
+.wordCard__lemma {
+  margin: 0;
+  font-family: $font-primary;
+  font-size: 1.55rem;
+  line-height: 1.1;
+  color: $color-text-primary;
+  font-weight: 800;
+}
+
+.wordCard__esPill {
+  flex: 0 0 auto;
+  background: $blue;
+  color: #ffffff;
+
+  border-radius: 8px;
+  padding: 8px 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow: 0 10px 22px -16px $blue-glow;
+  text-align: right;
+}
+
+.wordCard__esPillLabel {
+  font-family: $font-secondary;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  opacity: 0.95;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.wordCard__esPillValue {
+  font-family: $font-primary;
+  font-size: 0.95rem;
+  font-weight: 900;
+  margin-top: 2px;
+}
+
+.wordCard__rows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wordCard__row {
+  background: rgba(255, 255, 255, 0.35);
+  border: $border-default;
+  border-radius: $border-radius-sm;
+  padding: 10px 10px;
+}
+
+.wordCard__rowLabel {
+  font-family: $font-secondary;
+  font-size: 0.78rem;
+  font-weight: 900;
+  color: $color-text-secondary;
+  margin-bottom: 6px;
+}
+
+.wordCard__rowValue {
+  font-family: $font-secondary;
+  font-size: 0.98rem;
+  color: $color-text-primary;
+  line-height: 1.35;
+}
+
+.wordCard__synList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.wordCard__synItem {
+  font-family: $font-secondary;
+  font-size: 0.95rem;
+  color: $color-text-primary;
+
+  padding: 6px 8px;
+  border-radius: 10px;
+
+  background: $blue-soft;
+  border: 1px solid rgba(79, 143, 230, 0.12);
+}
+
+.wordCard__muted {
+  font-family: $font-secondary;
+  color: rgba(60, 80, 120, 0.6);
+  font-size: 0.95rem;
+}
+
+.wordCard__footerDivider {
+  height: 1px;
+  background: rgba(20, 60, 110, 0.10);
+  margin-top: 12px;
+}
