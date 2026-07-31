@@ -62,5 +62,5 @@ src/
 
 ## Credits
 
-Most dictionary entries derive from The Free Dictionary by Farlex https://www.thefreedictionary.com/
-Another consulted source is Manas Sharma's English Dictionary in CSV format https://www.bragitoff.com/2016/03/english-dictionary-in-csv-format/
+- Most dictionary entries derive from The Free Dictionary by Farlex https://www.thefreedictionary.com/
+- Another consulted source is Manas Sharma's English Dictionary in CSV format https://www.bragitoff.com/2016/03/english-dictionary-in-csv-format/
