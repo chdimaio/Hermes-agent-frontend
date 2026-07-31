@@ -60,3 +60,7 @@ src/
 4. Backend returns `{ lemma, definition, translationEs, synonyms[] }` or a 404
 5. On success, a `<WordCard>` bubble is rendered; on 404, a "not found" message appears
 
+## Credits
+
+Most dictionary entries derive from The Free Dictionary by Farlex https://www.thefreedictionary.com/
+Another consulted source is Manas Sharma's English Dictionary in CSV format https://www.bragitoff.com/2016/03/english-dictionary-in-csv-format/
