@@ -6,8 +6,8 @@ A bilingual (English → Spanish) dictionary chat app. Users type a word and rec
 
 - **React 19** — UI library
 - **Vite 8** — dev server and build tool
-- **JavaScript** (no TypeScript)
-- **SCSS** — with a glassmorphism design system (blue tones)
+- **JavaScript**
+- **SCSS** — with a glassmorphism design system in blue tones
 - **axios** — HTTP client
 
 ## Getting started
