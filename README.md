@@ -43,7 +43,7 @@ src/
 ├── pages/
 │   └── ChatPage/       # main chat view (message list + input)
 ├── routes/
-│   └── AppRoutes.jsx   # placeholder (not wired)
+│   └── AppRoutes.jsx   # placeholder (W.I.P. - not wired)
 ├── styles/
 │   ├── main.scss       # global styles, chat shell, bubbles, input bar
 │   ├── _variables.scss # design tokens (blue/green tones, glass shadows)
